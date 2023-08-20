@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Euphoria+Script&display=swap');
+
+:root {
+    --cor-fundo: #110b19;
+    --cor-texto: #f6f6f6;
+    --cor-primaria: #e06ca8;
+    --cor-fundo-secundario: #1f142e;
+    --cor-primaria-suave: #db6ba558;
+
+    --fonte-titulo: 'Euphoria Script', cursive;
+    --fonte-texto: 'Comfortaa', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
+}
+
+body {
+    background-color: var(--cor-fundo);
+}
+
+.cabecalho {
+    display: flex;
+    height: 5rem;
+    padding: 0.5rem 1rem;
+}
+
+.container {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.container__introducao{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container__introducao__apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container__introducao__apresentacao__img{
+    width: 60%;
+    border-radius: 5%;
+}
+
+.container__introducao__apresentacao__texto h1{
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria);
+    font-size: 6.5rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.container__introducao__apresentacao__texto p{
+    font-size: 1rem;
+    text-indent: 2.25rem;
+    text-align: justify;
+}
+
+.container__introducao__botoes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container__introducao__botoes__botao{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem 0;
+
+    /* Estilo texto e borda */
+    text-decoration: none;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 0.5rem;
+    color: var(--cor-primaria);
+    font-size: 1rem;
+}
+
+.container__introducao__botoes__botao:hover {
+    background-color: var(--cor-fundo-secundario);
+}
+
+.container__projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container__projetos__projeto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container__projetos__projeto img {
+    width: 70%;
+}
+
+.container__projetos__projeto__descricao h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.container__projetos__projeto__descricao p {
+    font-size: 1rem;
+    text-indent: 2.25rem;
+    text-align: justify;
+}
+
+.rodape {
+    display: flex;
+    background-color: var(--cor-primaria-suave);
+    justify-content: center;
+    padding: 1rem;
+    font-size: 0.75rem;
+}
+
+/* Media Queries -- Responsive */
+
+@media (min-width: 744px){
+    .cabecalho {
+        padding: 0.5rem 3rem;
+    }
+
+    .container {
+        padding: 2rem 3rem;
+    }
+
+    .container__introducao__botoes {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .container__projetos__projeto {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .container__projetos__projeto img {
+        width: 50%;
+    }
+
+    #studa-mais {
+        flex-direction: row-reverse;
+    }
+
+    .rodape {
+        padding: 1rem 3rem;
+    }
+}
+
+@media (min-width: 1280px){
+    .cabecalho {
+        padding: 0.5rem 6.75rem;
+    }
+
+    .container {
+        padding: 2rem 6.75rem;
+    }
+
+    .container__introducao {
+        gap: 1.25rem;
+    }
+
+    .container__introducao__apresentacao {
+        flex-direction: row-reverse;
+        align-items: end;
+        padding: 0rem 6.5rem;
+        gap: 3rem;
+    }
+
+    .container__introducao__apresentacao__texto h1{
+        text-align: end;
+    }
+
+    .container__introducao__botoes {
+        flex-direction: row;
+        gap: 1.5rem;
+        padding: 0 13rem;
+    }
+
+    .container__projetos__projeto {
+        flex-direction: row;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .container__projetos__projeto img {
+        width: 19.5rem;
+    }
+
+    .container__projetos__projeto__descricao h2{
+        text-align: left;
+    }
+
+    #studa-mais {
+        flex-direction: row-reverse;
+    }
+
+    #studa-mais h2 {
+        text-align: right;
+    }
+
+    .rodape {
+        padding: 1rem 6.75rem;
+    }
+}
+
+@media (min-width: 1920px){
+    .cabecalho {
+        padding: 0.5rem 11.3%;
+    }
+    .container {
+        padding: 2rem 11.3%;
+    }
+    .container__introducao__apresentacao__img {
+        
+    }
+}
